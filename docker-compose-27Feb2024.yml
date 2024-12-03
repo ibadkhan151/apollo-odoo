@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  odoo15:
+    image: ham2qur/odoo15_custom
+    container_name: odoo15_custom
+    ports:
+      - "8089:8069"
+      - "8092:8072"
+    volumes:
+      - odoo15-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+    environment:
+      - HOST=host.docker.internal
+      - USER=odoo
+      - PASSWORD=odoo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  odoo15-web-data:
+
+
