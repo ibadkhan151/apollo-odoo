@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="custom_login_page" inherit_id="web.login">
+        <xpath expr="//div[@class='form-group field-password']" position="replace">
+            <div class="form-group field-password">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password"
+                       class="form-control" required="required" autocomplete="current-password"
+                       maxlength="4096"/>
+                <i class="fa fa-eye-slash toggle-password"></i>
+            </div>
+        </xpath>
+    </template>
+</odoo>
