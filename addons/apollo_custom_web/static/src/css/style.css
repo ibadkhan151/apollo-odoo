@@ -1,0 +1,20 @@
+/* Ensure the parent container has relative positioning */
+.field-password {
+    position: relative;
+}
+
+/* Adjust the padding of the input field to make room for the eye icon */
+.field-password input {
+    padding-right: 40px; /* Space for the eye icon on the right */
+}
+
+/* Style and positioning for the eye icon */
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    top: 72%; /* Start positioning at the vertical center */
+    right: 15px; /* Adjust the horizontal position */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    color: #aaa; /* Default color */
+    font-size: 18px; /* Icon size */
+}
